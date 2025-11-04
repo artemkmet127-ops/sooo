@@ -35,9 +35,33 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         public IActionResult AdminPanel()
         {
             return View(products);
+        }
+    
+        //public IActionResult Add()
+        //{
+        //    return View();
+        //}
+
+        [HttpPost]
+        public IActionResult Add(Product product)
+        {
+            if (product == null)
+                return BadRequest();
+
+            // Генеруємо новий Id
+            product.Id = products.Count > 0 ? products.Max(p => p.Id) + 1 : 1;
+
+            products.Add(product);
+
+            return RedirectToAction("AdminPanel");
         }
         public IActionResult Delete(int id)
         {
