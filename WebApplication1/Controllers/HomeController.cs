@@ -19,6 +19,12 @@ namespace WebApplication1.Controllers
         {
             _logger = logger;
         }
+        [HttpPost]
+        public IActionResult SaveProduct(Product element)
+        {
+            products.Add(element);
+            return RedirectToAction("AdminPanel");
+        }
 
         public IActionResult Index()
         {
