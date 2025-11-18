@@ -25,6 +25,7 @@
                 <td>@i.Price$</td>
                 <td>@i.Id</td>
                 <td>
+                    <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@i.Id">Edit</a>
                     <a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@i.Id">Delete</a>
                 </td>
             </tr>
