@@ -26,6 +26,16 @@ namespace WebApplication1.Controllers
             return RedirectToAction("AdminPanel");
         }
 
+        [HttpPost]
+        public IActionResult EditProduct(Product element)
+        {
+            var index = products.FindIndex(x => x.Id == element.Id);
+
+            products[index] = element;
+
+            return RedirectToAction("AdminPanel");
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -45,9 +55,12 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-            return View();
+            var item = products.FirstOrDefault(x => x.Id == id);
+            if (item == null)
+                return NotFound(); // 404
+            return View(item);
         }
 
         public IActionResult AdminPanel()
