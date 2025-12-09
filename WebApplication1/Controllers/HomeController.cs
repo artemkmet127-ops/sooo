@@ -41,9 +41,10 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public IActionResult Details()
+        public IActionResult Details(int id)
         {
-            return View();
+            var item = products.FirstOrDefault(x => x.Id == id);
+            return View(item);
         }
 
         public IActionResult Privacy()
