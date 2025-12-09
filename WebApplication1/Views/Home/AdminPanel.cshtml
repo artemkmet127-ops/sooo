@@ -18,12 +18,12 @@
         {
             <tr>
                 <th scope="row">@i.Id</th>
+                <td>@i.Price$</td>
                 <td>
-                    <img height="50" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D" />
+                    <img height="50" src="@i.ImageUrl" />
                 </td>
                 <td>@i.Title</td>
-                <td>@i.Price$</td>
-                <td>@i.Id</td>
+                <td>@i.Feedbacks</td>
                 <td>
                     <a class="btn btn-dark" asp-controller="Home" asp-action="Details" asp-route-id="@i.Id">View</a>
                     <a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@i.Id">Edit</a>

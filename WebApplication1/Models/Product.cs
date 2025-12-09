@@ -7,5 +7,6 @@
         public string Title { get; set; }
         public string Model  { get; set; }
         public int Feedbacks { get; set; }
+        public string ImageUrl { get; set; }
     }
 }

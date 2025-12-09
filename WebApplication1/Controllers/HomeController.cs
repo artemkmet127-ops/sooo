@@ -9,11 +9,11 @@ namespace WebApplication1.Controllers
         private readonly ILogger<HomeController> _logger;
         static List<Product> products = new()
         {
-            new Product { Id = 1, Price = 100, Title = "Product 1", Model = "Category A", Feedbacks = 10 },
-            new Product { Id = 2, Price = 200, Title = "Product 2", Model = "Category B", Feedbacks = 5 },
-            new Product { Id = 3, Price = 150, Title = "Product 3", Model = "Category A", Feedbacks = 8 },
-            new Product { Id = 4, Price = 300, Title = "Product 4", Model = "Category C", Feedbacks = 12 },
-            new Product { Id = 5, Price = 250, Title = "Product 5", Model = "Category B", Feedbacks = 7 }
+            new Product { Id = 1, Price = 100, Title = "Product 1", Model = "Category A", Feedbacks = 10 , ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIcpRzJnQPA0LEGMbUoUDLXpgjeNRl121k_w&s"},
+            new Product { Id = 2, Price = 200, Title = "Product 2", Model = "Category B", Feedbacks = 5 , ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqL5qd24N1x-HHHjHrPNEVsIR4PoTY75_vKw&s"},
+            new Product { Id = 3, Price = 150, Title = "Product 3", Model = "Category A", Feedbacks = 8 , ImageUrl ="https://art-de-luxe.com.ua/wa-data/public/shop/products/65/31/13165/images/71707/71707.750x0.jpeg"},
+            new Product { Id = 4, Price = 300, Title = "Product 4", Model = "Category C", Feedbacks = 12 , ImageUrl = "https://soundmagcdn.fra1.cdn.digitaloceanspaces.com/product/94205/c/coverkZrPUd-desktop.webp"},
+            new Product { Id = 5, Price = 250, Title = "Product 5", Model = "Category B", Feedbacks = 7 , ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxy0kwmJem-1qJhz_wQXy0LR4AOhij0L_Clw&s"}
         };
         public HomeController(ILogger<HomeController> logger)
         {
