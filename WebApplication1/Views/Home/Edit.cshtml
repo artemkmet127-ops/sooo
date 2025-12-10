@@ -2,7 +2,10 @@
 <h1>Edit product</h1>
 
 <form asp-action="EditProduct">
-   
+    <div class="mb-3">
+        <label for="formGroupExampleInput2" class="form-label">Id</label>
+        <input readonly asp-for="Id" type="text" class="form-control" id="formGroupExampleInput2" placeholder="...">
+    </div>
     <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Price</label>
         <input asp-for="Price" type="text" class="form-control" id="formGroupExampleInput2" placeholder="...">
@@ -24,6 +27,6 @@
         <input asp-for="ImageUrl" type="text" class="form-control" id="formGroupExampleInput2" placeholder="...">
     </div>
 
-    <button type="submit" class="btn btn-success">Create Product</button>
+    <button type="submit" class="btn btn-success">Edit Product</button>
 </form>
 
